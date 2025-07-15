@@ -48,9 +48,6 @@ const Index = () => {
         {/* Technical Skills */}
         <Skills />
         
-        {/* Blog Section */}
-        <Blog />
-        
         {/* Contact */}
         <Contact />
       </main>

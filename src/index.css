@@ -2,60 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Portfolio Design System - Muted, Recruiter-focused */
+/* Creative Student Portfolio Design System - Interactive & Modern */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 215 25% 27%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 215 28% 17%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 20% 94%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
 
-    --muted: 210 20% 94%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 25% 88%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 85%;
-    --input: 220 15% 85%;
-    --ring: 215 28% 17%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
-    /* Professional color palette */
-    --professional-blue: 210 40% 58%;
-    --professional-blue-dark: 210 45% 45%;
-    --professional-green: 145 40% 58%;
-    --professional-amber: 45 85% 58%;
-    --professional-slate: 215 20% 65%;
-    --professional-slate-dark: 215 25% 45%;
+    /* Creative color palette */
+    --creative-purple: 262.1 83.3% 57.8%;
+    --creative-purple-dark: 262.1 83.3% 47.8%;
+    --creative-blue: 217.2 91.2% 59.8%;
+    --creative-blue-dark: 217.2 91.2% 49.8%;
+    --creative-green: 142.1 76.2% 36.3%;
+    --creative-green-light: 142.1 70.6% 45.3%;
+    --creative-orange: 24.6 95% 53.1%;
+    --creative-pink: 330.4 81.2% 60.4%;
+    --creative-cyan: 188.7 85.7% 53.3%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--professional-blue-dark)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.05), hsl(var(--professional-blue) / 0.05));
+    /* Interactive gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--creative-blue)), hsl(var(--creative-purple)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--creative-green)), hsl(var(--creative-cyan)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--creative-orange)), hsl(var(--creative-pink)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--creative-blue) / 0.1), hsl(var(--creative-purple) / 0.05));
+    --gradient-card: linear-gradient(135deg, hsl(var(--background)), hsl(var(--accent)));
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
-    --shadow-hover: 0 8px 25px -5px hsl(var(--primary) / 0.15);
+    /* Enhanced shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--creative-blue) / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(var(--creative-blue) / 0.1), 0 2px 4px -1px hsl(var(--creative-blue) / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--creative-blue) / 0.1), 0 4px 6px -2px hsl(var(--creative-blue) / 0.05);
+    --shadow-hover: 0 20px 25px -5px hsl(var(--creative-purple) / 0.15);
+    --shadow-glow: 0 0 20px hsl(var(--creative-blue) / 0.3);
 
-    /* Transitions */
+    /* Smooth transitions */
     --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-transform: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 
     --radius: 0.5rem;
 
@@ -80,13 +87,13 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222.2 84% 6.9%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222.2 84% 6.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -103,7 +110,33 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 217.2 91.2% 59.8%;
+
+    /* Dark mode creative colors */
+    --creative-purple: 262.1 83.3% 67.8%;
+    --creative-purple-dark: 262.1 83.3% 47.8%;
+    --creative-blue: 217.2 91.2% 69.8%;
+    --creative-blue-dark: 217.2 91.2% 49.8%;
+    --creative-green: 142.1 76.2% 46.3%;
+    --creative-green-light: 142.1 70.6% 55.3%;
+    --creative-orange: 24.6 95% 63.1%;
+    --creative-pink: 330.4 81.2% 70.4%;
+    --creative-cyan: 188.7 85.7% 63.3%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--creative-blue)), hsl(var(--creative-purple)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--creative-green)), hsl(var(--creative-cyan)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--creative-orange)), hsl(var(--creative-pink)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--creative-blue) / 0.1), hsl(var(--creative-purple) / 0.05));
+    --gradient-card: linear-gradient(135deg, hsl(217.2 32.6% 17.5%), hsl(217.2 32.6% 19.5%));
+
+    /* Dark mode enhanced shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-hover: 0 20px 25px -5px hsl(var(--creative-purple) / 0.3);
+    --shadow-glow: 0 0 20px hsl(var(--creative-blue) / 0.5);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -121,6 +154,76 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Interactive hover effects */
+  .icon-hover {
+    @apply transition-all duration-300 hover:scale-110 hover:shadow-glow;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-hover hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-creative-blue to-creative-purple bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    @apply bg-gradient-to-r from-creative-blue to-creative-purple p-[1px] rounded-lg;
+  }
+
+  .glow-effect {
+    @apply shadow-glow;
+  }
+
+  .animated-gradient {
+    @apply bg-gradient-to-r from-creative-blue via-creative-purple to-creative-pink bg-[length:200%_100%] animate-gradient;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-gradient {
+    animation: gradient 3s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Tooltip styles */
+  .tooltip {
+    @apply invisible absolute z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 transition-opacity duration-300;
+  }
+
+  .tooltip-wrapper:hover .tooltip {
+    @apply visible opacity-100;
+  }
+}
+
+/* Keyframes */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

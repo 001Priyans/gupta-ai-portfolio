@@ -1,7 +1,14 @@
 import { useState } from 'react';
-import { Menu, X, Download, Mail, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Download, Mail, Github, Linkedin, Sun, Moon, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useTheme } from '@/components/ui/theme-provider';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 interface HeaderProps {
   className?: string;
@@ -9,13 +16,13 @@ interface HeaderProps {
 
 export function Header({ className }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const navigation = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -56,7 +63,7 @@ export function Header({ className }: HeaderProps) {
                   variant="ghost"
                   size="sm"
                   asChild
-                  className="hover:bg-accent"
+                  className="hover:bg-accent icon-hover"
                 >
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
                     <link.icon className="h-4 w-4" />
@@ -64,7 +71,30 @@ export function Header({ className }: HeaderProps) {
                 </Button>
               ))}
             </div>
-            <Button variant="default" size="sm" className="font-medium">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="icon-hover">
+                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  <Sun className="mr-2 h-4 w-4" />
+                  <span>Light</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  <Moon className="mr-2 h-4 w-4" />
+                  <span>Dark</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  <Monitor className="mr-2 h-4 w-4" />
+                  <span>System</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button variant="default" size="sm" className="font-medium bg-gradient-primary hover:shadow-glow">
               <Download className="h-4 w-4 mr-2" />
               Resume
             </Button>
@@ -103,14 +133,37 @@ export function Header({ className }: HeaderProps) {
                     variant="ghost"
                     size="sm"
                     asChild
-                    className="hover:bg-accent"
+                    className="hover:bg-accent icon-hover"
                   >
                     <a href={link.href} target="_blank" rel="noopener noreferrer">
                       <link.icon className="h-4 w-4" />
                     </a>
                   </Button>
                 ))}
-                <Button variant="default" size="sm" className="font-medium">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="icon-hover">
+                      <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                      <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                      <span className="sr-only">Toggle theme</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => setTheme("light")}>
+                      <Sun className="mr-2 h-4 w-4" />
+                      <span>Light</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setTheme("dark")}>
+                      <Moon className="mr-2 h-4 w-4" />
+                      <span>Dark</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setTheme("system")}>
+                      <Monitor className="mr-2 h-4 w-4" />
+                      <span>System</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <Button variant="default" size="sm" className="font-medium bg-gradient-primary hover:shadow-glow">
                   <Download className="h-4 w-4 mr-2" />
                   Resume
                 </Button>

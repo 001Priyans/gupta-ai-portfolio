@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import profileHeadshot from '@/assets/profile-headshot.jpg';
+import profileHeadshot from '/lovable-uploads/e190e64d-fedf-4818-8d96-e12fd5b4ee79.png';
 import workspaceHero from '@/assets/workspace-hero.jpg';
 
 interface HeroProps {
@@ -91,10 +91,10 @@ export function Hero({ className }: HeroProps) {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-hover">
+              <div className="w-80 h-80 rounded-full overflow-hidden shadow-hover glow-effect">
                 <img
                   src={profileHeadshot}
-                  alt="Priyanshu Gupta - AI/ML Engineer"
+                  alt="Priyanshu Gupta - AI/ML Engineering Student"
                   className="w-full h-full object-cover"
                 />
               </div>
