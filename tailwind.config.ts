@@ -61,7 +61,35 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				professional: {
+					blue: 'hsl(var(--professional-blue))',
+					'blue-dark': 'hsl(var(--professional-blue-dark))',
+					green: 'hsl(var(--professional-green))',
+					amber: 'hsl(var(--professional-amber))',
+					slate: 'hsl(var(--professional-slate))',
+					'slate-dark': 'hsl(var(--professional-slate-dark))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'sm': 'var(--shadow-sm)',
+				'md': 'var(--shadow-md)',
+				'lg': 'var(--shadow-lg)',
+				'hover': 'var(--shadow-hover)'
+			},
+			transitionProperty: {
+				'all': 'var(--transition-all)',
+				'transform': 'var(--transition-transform)'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Inter', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
